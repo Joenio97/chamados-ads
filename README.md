@@ -13,26 +13,29 @@ Na raiz do projeto, execute o comando abaixo para instalar as dependências exat
 
 ```bash
 uv sync --locked
-4. Execução da Aplicação
+```
+
+## 4. Execução da Aplicação
 Para executar a aplicação no GitHub Codespaces, utilize o comando:
 
-Bash
+```bash
 uv run flask --app app run --host=0.0.0.0 --port=5000
-5. Acesso à Rota Inicial e Resposta Esperada
-Com o servidor em execução, acesse a rota GET / pelo navegador (utilizando o endereço gerado na aba Portas para a porta 5000) ou via terminal com:
+```
 
-Bash
+## 5. Acesso à Rota Inicial e Resposta Esperada
+Com o servidor em execução, acesse a rota `GET /` pelo navegador (utilizando o endereço gerado na aba **Portas** para a porta `5000`) ou via terminal com:
+
+```bash
 curl -i http://localhost:5000/
+```
+
 A resposta esperada deve conter:
+- **Código de status HTTP:** `200 OK`
+- **Cabeçalho:** `Content-Type: application/json`
+- **Corpo (JSON):**
 
-Código de status HTTP: 200 OK
-
-Cabeçalho: Content-Type: application/json
-
-Corpo (JSON):
-
-JSON
+```json
 {
   "mensagem": "API de chamados em funcionamento"
 }
-
+```
